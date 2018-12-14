@@ -1,0 +1,91 @@
+<!--
+Julia Spehlmann, UMass Lowell Computer Science, julia_spehlmann@student.uml.edu
+COMP 4610 GUI Programming I
+Assignment 9: Implementing a Bit of Scrabble with Drag-and-Drop
+Copyright (c) 2018 by Julia Spehlmann. All rights reserved.
+Updated by JS on December 13, 2018 at 7:07 PM
+File: index.html
+Description: This file is the html structure for my one line scrabble game. The webpage
+is split in a grid of 5 subsections (title, board, hand, score, buttons).
+-->
+
+<!-- declaration of the HTML version the document is written in -->
+<!DOCTYPE html>
+
+<!-- marks the start and primary language (english) of the document -->
+<html lang="en">
+  <head>
+
+    <!-- specify character encoding as utf-8 -->
+    <meta charset="utf-8">
+
+    <!-- gives the page a title -->
+    <title>Scrabble App</title>
+
+    <!-- links CSS file to control appearnce of page and bootstrap link -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- links a JS file to control interactions on the pages and validations -->
+    <!-- links to jquery libraries -->
+    <!-- links to jquery widgets -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+    <script src="./js/script.js"></script>
+    <!-- <script src="./js/jquery.validate.js"></script> -->
+    <script src="https://code.jquery.com/ui/jquery-ui-git.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"></link>
+  </head>
+
+  <!-- all content in the body will be displayed in main browser window -->
+  <body>
+
+    <!-- wrapper holds main grid of the webpage -->
+    <div class="wrapper">
+        <!-- the grid is split into the title, board, hand, scores and buttons-->
+        <div class="one">
+          <h1 id="title">S C R A B B L E</h1>
+        </div>
+        <!-- board is represented by an inline grid of 15 spaces -->
+        <div class="two">
+          <div class="board" id="one-line-sb">
+            <div id="space-1" value="1" class="spaces blank-space"></div>
+            <div id="space-2" value="2" class="spaces blank-space"></div>
+            <div id="space-3" value="3" class="spaces double-word"></div>
+            <div id="space-4" value="4" class="spaces blank-space"></div>
+            <div id="space-5" value="5" class="spaces blank-space"></div>
+            <div id="space-6" value="6" class="spaces blank-space"></div>
+            <div id="space-7" value="7" class="spaces double-letter"></div>
+            <div id="space-8" value="8" class="spaces blank-space"></div>
+            <div id="space-9" value="9" class="spaces double-letter"></div>
+            <div id="space-10" value="10" class="spaces blank-space"></div>
+            <div id="space-11" value="11" class="spaces blank-space"></div>
+            <div id="space-12" value="12" class="spaces blank-space"></div>
+            <div id="space-13" value="13" class="spaces double-word"></div>
+            <div id="space-14" value="14" class="spaces blank-space"></div>
+            <div id="space-15" value="15" class="spaces blank-space"></div>
+          </div>
+          <p id="instructions">*Tiles may only be placed consecutively and you cannot remove tiles from the board so be careful before playing your hand!*</p>
+        </div>
+        <div class="three" id="tile-holder">
+          <ul id="tile-list"></ul>
+        </div>
+        <!-- 0 is a placeholder for score until updated -->
+        <div class="four">Current Hand Score:<p id="score"> 0 </p>
+          Total Score:<p id="total-score"> 0 </p>
+        </div>
+        <!-- buttons to control tiles -->
+        <div class="four">
+          <button type="button" class="btn btn-info" onclick="playWord()">Play Word!</button>
+          <button type="button" class="btn btn-info" onclick="dealNewHand()">Deal New Tiles!</button>
+        </div>
+    </div>
+
+    <!-- links needed for bootstrap -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  </body>
+</html>
