@@ -1,0 +1,97 @@
+/*
+Julia Spehlmann, UMass Lowell Computer Science, julia_spehlmann@student.uml.edu
+COMP 4610 GUI Programming I
+Assignment 9: Implementing a Bit of Scrabble with Drag-and-Drop
+Copyright (c) 2018 by Julia Spehlmann. All rights reserved.
+Updated by JS on December 13, 2018 at 7:24 PM
+File: style.css.js
+Description: This file is the styling behind my scrabble game. Uses a little bit of bootstrap
+but mostly styled here.
+}
+*/
+
+
+/* background wrapper and div styling */
+.wrapper {
+  display: grid;
+}
+* {box-sizing: border-box;}*
+
+.wrapper {
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-left: 50px;
+  margin-top: 15px;
+}
+
+.wrapper > div {
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+/* uses a background image to display the board */
+.two {
+  background-image: url('../img/one_line_sb.png');
+  background-repeat: no-repeat;
+  padding-bottom: 50px;
+}
+
+/* uses a background image to display the tile holder */
+.three {
+  background-image: url('../img/tile_holder.png');
+  background-repeat: no-repeat;
+  background-size: 470px;
+  height: 153px;
+}
+
+/* styling for tile list and tiles */
+#tile-list{
+  padding-left: 37px;
+  padding-top: 30px;
+}
+
+.tile {
+  width: 5%;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline;
+}
+
+
+/* board and spaces styling */
+.board {
+  text-align: left;
+  margin-top: 0;
+  margin-left: 10px;
+  height: 70px;
+  margin-right: 72px;
+  white-space: nowrap;
+}
+
+.spaces {
+  text-align: center;
+  width: 70px;
+  display: inline-grid;
+  height: 74px;
+}
+
+/* titles and text styling */
+#instructions {
+  margin-top: 20px;
+  font-size: x-small;
+  font-weight: bold;
+}
+
+#title {
+    color: #212529;
+    font-weight: bold;
+    padding-bottom: 30px;
+    font-size: 50px;
+}
